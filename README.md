@@ -2,8 +2,8 @@
 
 Hellen Suite is an application for managing hotels and similar businesses. It
 simplifies operational controls and administrative and management tasks. The
-application is available as a web and desktop application and is currently under
-development; it is not yet ready for production.
+application is available as a desktop application and is currently under development;
+it is not yet ready for production.
 
 This repository contains the landing website for Hellen Suite, intended to
 introduce the product and help users download the desktop application. The
@@ -36,6 +36,14 @@ Run the application tests and check formatting with:
 arix tests
 arix format --test
 ```
+
+For optional responsive regression checks, start `arix dev` and a local Chromium
+or Chrome instance with remote debugging enabled on port 9223, then run
+`node tools/responsive-check.mjs` from the application root. Node 22 or later
+is required only for this developer check, not for deployment. Set `SITE_URL`
+or `CHROME_DEBUG_URL` to override the default local addresses. The check covers
+both languages, navigation targets, touch target sizes and layout widths; it
+does not replace visual review, keyboard checks or physical-device testing.
 
 Use `arix format` to apply formatting. The CLI also manages framework and
 frontend updates through `arix core:update`, `arix css:update`, and

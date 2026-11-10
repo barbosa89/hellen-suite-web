@@ -16,7 +16,7 @@ Hellen Suite helps hotels and similar businesses manage operational controls and
 
 ## Positioning
 
-Hellen Suite is available as both a web application and a desktop application.
+Hellen Suite is a desktop application for hotel management.
 
 ## Capabilities and Constraints
 
@@ -32,5 +32,5 @@ Hellen Suite is available as both a web application and a desktop application.
 ## Product Principles
 
 - Help hotel operators understand the product and find the desktop download.
-- Describe the product's development status accurately.
+- Describe product capabilities accurately and avoid unsupported readiness claims.
 - Keep the website aligned with the separately maintained application and its releases.
