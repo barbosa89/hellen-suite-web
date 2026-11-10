@@ -45,6 +45,14 @@
     .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid #9dbbb8; }
     .feature h3 { margin: 0; font-size: clamp(1.4rem, 2vw, 2rem); line-height: 1.2; letter-spacing: -.025em; }
     .feature p { max-width: 38rem; margin: 0; line-height: 1.7; }
+    .showcase { background: #f5f8f6; }
+    .showcase-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; }
+    .showcase-heading h2 { margin: 0; font-size: clamp(2.4rem, 4vw, 4rem); line-height: 1.08; letter-spacing: -.035em; }
+    .showcase-heading p { max-width: 26rem; margin: 0; font-size: 1.1rem; }
+    .showcase-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+    .showcase-grid figure { min-width: 0; margin: 0; }
+    .screenshot-placeholder { display: grid; place-items: center; width: 100%; min-width: 0; aspect-ratio: 4 / 3; padding: 1.5rem; border: 1px dashed #89aaa5; background: #e7f0ed; color: #315d5d; text-align: center; }
+    .showcase-grid figcaption { padding-top: 1rem; line-height: 1.6; }
     .download { display: flex; align-items: end; justify-content: space-between; gap: 3rem; background: #b8edf0; }
     .download h2 { max-width: none; }
     .button-dark { flex: none; background: var(--teal); color: white; }
@@ -60,9 +68,13 @@
     .release-featured h2, .release-history h2 { margin-bottom: 1rem; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; letter-spacing: -.035em; }
     .release-featured-copy > p { max-width: 30rem; color: #d2e6e4; }
     .release-version { display: flex; flex-wrap: wrap; align-items: baseline; gap: .75rem; margin-top: 2.5rem; color: #d2e6e4; }
-    .release-version span:first-child { color: #fff; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1; letter-spacing: -.04em; }
+    .release-version span:first-child { color: #fff; font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; line-height: 1.2; letter-spacing: -.03em; }
     .release-installers { align-self: end; padding-top: 1.5rem; border-top: 1px solid #518084; }
     .release-installers h3 { margin: 0 0 1rem; font-size: 1rem; }
+    .release-details { margin: 0 0 1.5rem; font-size: .875rem; }
+    .release-details div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; padding-block: .5rem; border-bottom: 1px solid #518084; }
+    .release-details dt { font-weight: 700; }
+    .release-details dd { margin: 0; color: #d2e6e4; }
     .release-installers button, .release-row button { min-height: 3rem; padding: .75rem 1rem; border: 1px solid #8aa8a5; border-radius: .25rem; background: transparent; color: inherit; font: inherit; font-weight: 650; cursor: not-allowed; }
     .release-installers button { width: 100%; color: #d2e6e4; }
     .release-history { margin-top: clamp(4rem, 8vw, 7rem); }
@@ -73,6 +85,13 @@
     .release-row h3 { margin: 0; font-size: 1.4rem; }
     .release-row span { color: #426564; font-size: .9rem; }
     .release-row button { color: #426564; }
+    .downloads-faq { max-width: 52rem; margin-top: clamp(4rem, 8vw, 7rem); }
+    .downloads-faq h2 { margin-bottom: 2rem; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; letter-spacing: -.035em; }
+    .downloads-faq-item { border-top: 1px solid #b9ceca; }
+    .downloads-faq-item:last-child { border-bottom: 1px solid #b9ceca; }
+    .downloads-faq-item summary { padding: 1.25rem 0; cursor: pointer; font-weight: 700; }
+    .downloads-faq-item summary:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+    .downloads-faq-item p { margin: 0 0 1.25rem; color: #426564; }
     body > footer { max-width: none; margin: 0; padding: 2rem clamp(1.25rem, 7vw, 7rem); background: #07333a; color: #d2e6e4; font-size: .85rem; }
     @media (max-width: 700px) {
         body > header { position: relative; z-index: 3; min-height: 4.75rem; align-items: center; gap: .75rem; padding-block: .75rem; }
@@ -90,6 +109,8 @@
         .hero-mark { width: 68vw; right: -25%; top: 6%; opacity: .2; }
         .intro { grid-template-columns: 1fr; gap: 1.5rem; }
         .features-heading, .feature { grid-template-columns: 1fr; gap: 1rem; }
+        .showcase-heading { align-items: start; flex-direction: column; gap: 1rem; }
+        .showcase-grid { grid-template-columns: 1fr; gap: 2rem; }
         .features-heading { margin-bottom: 3rem; }
         .download { align-items: start; flex-direction: column; }
         .hero-bottom { position: relative; inset: auto; margin-top: 3rem; font-size: .72rem; }

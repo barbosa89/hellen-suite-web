@@ -31,6 +31,14 @@
             <article class="feature"><h3>{{ trans('home.finances_title') }}</h3><p>{{ trans('home.finances_content') }}</p></article>
         </div>
     </section>
+    <section class="showcase section-wrap" aria-labelledby="showcase-title">
+        <div class="showcase-heading"><h2 id="showcase-title">{{ trans('home.screenshots_title') }}</h2><p>{{ trans('home.screenshots_intro') }}</p></div>
+        <div class="showcase-grid">
+            <figure><div class="screenshot-placeholder">{{ trans('home.screenshot_pending') }}</div><figcaption>{{ trans('home.screenshot_rooms') }}</figcaption></figure>
+            <figure><div class="screenshot-placeholder">{{ trans('home.screenshot_pending') }}</div><figcaption>{{ trans('home.screenshot_reservations') }}</figcaption></figure>
+            <figure><div class="screenshot-placeholder">{{ trans('home.screenshot_pending') }}</div><figcaption>{{ trans('home.screenshot_cash') }}</figcaption></figure>
+        </div>
+    </section>
     <section class="download section-wrap" id="download" aria-labelledby="download-title">
         <div>
             <h2 id="download-title">{{ trans('home.download_heading') }}</h2>
