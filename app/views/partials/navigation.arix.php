@@ -1,6 +1,4 @@
 <nav aria-label="{{ trans('nav.label') }}">
-    <div class="nav-pages">
-        <a href="{{ url('/') }}" @if(url()->currentPath() === '/') aria-current="page" @endif>{{ trans('nav.home') }}</a>
-        <a href="{{ url('/about') }}" @if(url()->currentPath() === '/about') aria-current="page" @endif>{{ trans('nav.about') }}</a>
-    </div>
+    <a href="{{ url('/') }}#about">{{ trans('nav.about') }}</a>
+    <a class="nav-download" href="https://github.com/barbosa89/hellen-suite/releases">{{ trans('home.download') }} <span aria-hidden="true">↗</span></a>
 </nav>

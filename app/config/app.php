@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'name' => env('APP_NAME', 'ArixPHP'),
+    'name' => env('APP_NAME', 'Hellen Suite'),
     'url' => env('APP_URL', 'http://127.0.0.1:8181'),
     'debug' => env('APP_DEBUG', false),
     'locales' => ['es', 'en'],

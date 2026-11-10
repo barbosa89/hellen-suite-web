@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-it('renders the home page with its translations', function (): void {
+it('introduces Hellen Suite and links to its desktop releases', function (): void {
     $this->get('/')
         ->assertOk()
-        ->assertSee('Simple sites. Native PHP.')
-        ->assertSee('Fast multilingual pages, without Composer or frontend builds.');
+        ->assertSee('Hellen Suite')
+        ->assertSee('under development')
+        ->assertSee('https://github.com/barbosa89/hellen-suite/releases');
 });
