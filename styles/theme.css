@@ -11,11 +11,13 @@
     .skip-link:focus { top: 1rem; }
     .brand { display: inline-flex; align-items: center; gap: .7rem; min-height: 2.75rem; color: var(--ink); text-decoration: none; font-weight: 750; font-size: 1.2rem; letter-spacing: -.03em; }
     .brand-mark { width: 2.4rem; height: 2.4rem; object-fit: contain; }
-    nav { display: flex; align-items: center; gap: clamp(1rem, 3vw, 3rem); font-size: .9rem; font-weight: 650; }
+    nav { display: flex; align-items: center; gap: clamp(1.5rem, 3vw, 3rem); font-size: .9rem; font-weight: 650; }
     nav a { display: inline-flex; align-items: center; min-height: 2.75rem; text-decoration: none; }
     nav a:hover, .text-link:hover { text-decoration: underline; text-underline-offset: .25em; }
     nav .nav-download { padding: .6rem 1rem; border: 1px solid var(--teal); border-radius: .25rem; background: var(--teal); color: #fff; text-decoration: none; transition: background-color .2s ease; }
     nav .nav-download:hover { background: #0a5c66; text-decoration: none; }
+    .mobile-menu { display: none; }
+    .menu-toggle:focus-visible { outline: 3px solid var(--amber); outline-offset: 5px; }
     body > main { max-width: none; margin: 0; padding: 0; }
     .hero { position: relative; overflow: hidden; min-height: 39rem; padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 7vw, 7rem) 6rem; background: var(--teal); color: #f5fbf9; }
     .hero-inner { position: relative; z-index: 1; max-width: 47rem; }
@@ -23,7 +25,7 @@
     .hero h1 { max-width: 11ch; margin-bottom: 1.6rem; font-size: clamp(3.4rem, 7.3vw, 6rem); font-weight: 650; letter-spacing: -.04em; line-height: 1.03; text-wrap: balance; }
     .hero-description { max-width: 32rem; color: #d2e6e4; font-size: clamp(1.05rem, 1.5vw, 1.25rem); line-height: 1.65; }
     .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.75rem; margin-top: 2.4rem; }
-    .button { display: inline-flex; justify-content: space-between; align-items: center; gap: 2rem; min-height: 3.5rem; padding: .9rem 1.25rem; text-decoration: none; font-weight: 750; transition: background-color .2s ease, color .2s ease; }
+    .button { display: inline-flex; justify-content: center; align-items: center; min-height: 3.5rem; padding: .9rem 1.25rem; border-radius: .25rem; text-decoration: none; font-weight: 750; transition: background-color .2s ease, color .2s ease; }
     .button-primary { background: var(--amber); color: #16383a; }
     .button-primary:hover { background: #ffca48; }
     .text-link { display: inline-flex; align-items: center; gap: .35rem; min-height: 2.75rem; color: #f5fbf9; font-weight: 650; text-decoration: none; }
@@ -37,30 +39,62 @@
     .intro p, .download p { max-width: 42rem; margin-bottom: 0; font-size: 1.15rem; line-height: 1.75; }
     .features { background: #e7f0ed; }
     .features-heading { display: grid; grid-template-columns: 2fr 1fr; align-items: end; gap: 3rem; margin-bottom: clamp(3rem, 6vw, 6rem); }
-    .features-heading h2, .desktop h2 { max-width: 18ch; margin: 0; font-size: clamp(2.4rem, 4vw, 4rem); line-height: 1.08; letter-spacing: -.035em; font-weight: 650; text-wrap: balance; }
-    .features-heading p, .desktop p { max-width: 36rem; margin: 0; font-size: 1.15rem; line-height: 1.7; }
+    .features-heading h2 { max-width: 18ch; margin: 0; font-size: clamp(2.4rem, 4vw, 4rem); line-height: 1.08; letter-spacing: -.035em; font-weight: 650; text-wrap: balance; }
+    .features-heading p { max-width: 36rem; margin: 0; font-size: 1.15rem; line-height: 1.7; }
     .feature-list { border-top: 1px solid #9dbbb8; }
     .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid #9dbbb8; }
     .feature h3 { margin: 0; font-size: clamp(1.4rem, 2vw, 2rem); line-height: 1.2; letter-spacing: -.025em; }
     .feature p { max-width: 38rem; margin: 0; line-height: 1.7; }
-    .desktop { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: end; background: var(--teal); color: #f5fbf9; }
-    .desktop p { color: #d2e6e4; }
     .download { display: flex; align-items: end; justify-content: space-between; gap: 3rem; background: #b8edf0; }
     .download h2 { max-width: none; }
     .button-dark { flex: none; background: var(--teal); color: white; }
     .button-dark:hover { background: #0a5c66; }
+    .downloads-page { background: #f5f8f6; }
+    .downloads-container { width: min(100% - 2.5rem, 72rem); margin-inline: auto; }
+    .downloads-intro { padding: clamp(4rem, 8vw, 7rem) 0; background: var(--teal); color: #f5fbf9; }
+    .downloads-intro h1 { margin-bottom: 1rem; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.05; letter-spacing: -.04em; }
+    .downloads-intro p { max-width: 36rem; margin-bottom: 0; color: #d2e6e4; font-size: 1.15rem; }
+    .downloads-content { padding-block: clamp(3rem, 6vw, 5rem) clamp(5rem, 8vw, 8rem); }
+    .downloads-notice { margin-bottom: 2rem; padding: 1rem 1.25rem; background: #e2efed; color: #244f51; }
+    .release-featured { display: grid; grid-template-columns: 1fr minmax(15rem, .7fr); gap: clamp(2rem, 5vw, 5rem); padding: clamp(2rem, 5vw, 4rem); background: var(--teal); color: #f5fbf9; }
+    .release-featured h2, .release-history h2 { margin-bottom: 1rem; font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; letter-spacing: -.035em; }
+    .release-featured-copy > p { max-width: 30rem; color: #d2e6e4; }
+    .release-version { display: flex; flex-wrap: wrap; align-items: baseline; gap: .75rem; margin-top: 2.5rem; color: #d2e6e4; }
+    .release-version span:first-child { color: #fff; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1; letter-spacing: -.04em; }
+    .release-installers { align-self: end; padding-top: 1.5rem; border-top: 1px solid #518084; }
+    .release-installers h3 { margin: 0 0 1rem; font-size: 1rem; }
+    .release-installers button, .release-row button { min-height: 3rem; padding: .75rem 1rem; border: 1px solid #8aa8a5; border-radius: .25rem; background: transparent; color: inherit; font: inherit; font-weight: 650; cursor: not-allowed; }
+    .release-installers button { width: 100%; color: #d2e6e4; }
+    .release-history { margin-top: clamp(4rem, 8vw, 7rem); }
+    .release-history-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }
+    .release-history-heading p { max-width: 25rem; margin: 0; color: #426564; }
+    .release-row { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 1.5rem 0; border-top: 1px solid #b9ceca; }
+    .release-row:last-child { border-bottom: 1px solid #b9ceca; }
+    .release-row h3 { margin: 0; font-size: 1.4rem; }
+    .release-row span { color: #426564; font-size: .9rem; }
+    .release-row button { color: #426564; }
     body > footer { max-width: none; margin: 0; padding: 2rem clamp(1.25rem, 7vw, 7rem); background: #07333a; color: #d2e6e4; font-size: .85rem; }
     @media (max-width: 700px) {
-        body > header { min-height: 4.75rem; align-items: center; flex-wrap: wrap; }
-        nav { gap: .5rem 1rem; flex-wrap: wrap; }
-        .hero { min-height: 40rem; padding-top: 5rem; }
+        body > header { position: relative; z-index: 3; min-height: 4.75rem; align-items: center; gap: .75rem; padding-block: .75rem; }
+        .desktop-navigation { display: none; }
+        .mobile-menu { display: block; }
+        .menu-toggle { display: flex; align-items: center; justify-content: center; gap: .4rem; min-width: 2.75rem; min-height: 2.75rem; padding: .5rem .7rem; border: 1px solid var(--teal); border-radius: .25rem; color: var(--ink); font-size: .9rem; font-weight: 650; cursor: pointer; list-style: none; }
+        .menu-toggle::-webkit-details-marker { display: none; }
+        .menu-toggle:hover { background: #e2efed; }
+        .mobile-menu[open] .menu-toggle { background: var(--teal); color: #fff; }
+        .mobile-menu[open] .menu-toggle:hover { background: #0a5c66; }
+        .mobile-navigation { position: absolute; top: 100%; right: 0; left: 0; display: flex; flex-direction: column; align-items: stretch; gap: .75rem; padding: 1rem 1.25rem 1.25rem; border-top: 1px solid #c9dad6; background: #f5f8f6; box-shadow: 0 8px 18px rgb(7 62 70 / .12); }
+        .mobile-navigation a { justify-content: center; }
+        .hero { min-height: 0; padding-block: 4rem 1.75rem; }
         .hero h1 { font-size: clamp(2.5rem, 11vw, 4.5rem); overflow-wrap: anywhere; }
-        .hero-mark { width: 75vw; right: -25%; top: 8%; opacity: .2; }
+        .hero-mark { width: 68vw; right: -25%; top: 6%; opacity: .2; }
         .intro { grid-template-columns: 1fr; gap: 1.5rem; }
-        .features-heading, .feature, .desktop { grid-template-columns: 1fr; gap: 1rem; }
+        .features-heading, .feature { grid-template-columns: 1fr; gap: 1rem; }
         .features-heading { margin-bottom: 3rem; }
         .download { align-items: start; flex-direction: column; }
-        .hero-bottom { font-size: .72rem; }
+        .hero-bottom { position: relative; inset: auto; margin-top: 3rem; font-size: .72rem; }
+        .release-featured { grid-template-columns: 1fr; }
+        .release-history-heading, .release-row { align-items: start; flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button, nav .nav-download { transition: none; } }
 }

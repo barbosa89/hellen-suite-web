@@ -6,7 +6,7 @@
             <h1 id="home-title">{{ trans('home.title') }}</h1>
             <p class="hero-description">{{ trans('home.description') }}</p>
             <div class="hero-actions">
-                <a class="button button-primary" href="https://github.com/barbosa89/hellen-suite/releases">{{ trans('home.download') }} <span aria-hidden="true">↗</span></a>
+                <a class="button button-primary" href="{{ route('downloads') }}">{{ trans('home.download') }}</a>
                 <a class="text-link" href="#features">{{ trans('home.discover') }} <span aria-hidden="true">↓</span></a>
             </div>
         </div>
@@ -31,15 +31,11 @@
             <article class="feature"><h3>{{ trans('home.finances_title') }}</h3><p>{{ trans('home.finances_content') }}</p></article>
         </div>
     </section>
-    <section class="desktop section-wrap" id="desktop" aria-labelledby="desktop-title">
-        <h2 id="desktop-title">{{ trans('home.desktop_title') }}</h2>
-        <p>{{ trans('home.desktop_content') }}</p>
-    </section>
     <section class="download section-wrap" id="download" aria-labelledby="download-title">
         <div>
             <h2 id="download-title">{{ trans('home.download_heading') }}</h2>
             <p>{{ trans('home.download_content') }}</p>
         </div>
-        <a class="button button-dark" href="https://github.com/barbosa89/hellen-suite/releases">{{ trans('home.download') }} <span aria-hidden="true">↗</span></a>
+        <a class="button button-dark" href="{{ route('downloads') }}">{{ trans('home.download') }}</a>
     </section>
 @endsection
