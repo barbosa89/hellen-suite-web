@@ -62,6 +62,7 @@
     .downloads-intro { padding: clamp(4rem, 8vw, 7rem) 0; background: var(--teal); color: #f5fbf9; }
     .downloads-intro h1 { margin-bottom: 1rem; font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1.05; letter-spacing: -.04em; }
     .downloads-intro p { max-width: 36rem; margin-bottom: 0; color: #d2e6e4; font-size: 1.15rem; }
+    .downloads-intro p + p { margin-top: 1rem; }
     .downloads-content { padding-block: clamp(3rem, 6vw, 5rem) clamp(5rem, 8vw, 8rem); }
     .downloads-notice { margin-bottom: 2rem; padding: 1rem 1.25rem; background: #e2efed; color: #244f51; }
     .release-featured { display: grid; grid-template-columns: 1fr minmax(15rem, .7fr); gap: clamp(2rem, 5vw, 5rem); padding: clamp(2rem, 5vw, 4rem); background: var(--teal); color: #f5fbf9; }
@@ -77,6 +78,8 @@
     .release-details dd { margin: 0; color: #d2e6e4; }
     .release-installers button, .release-row button { min-height: 3rem; padding: .75rem 1rem; border: 1px solid #8aa8a5; border-radius: .25rem; background: transparent; color: inherit; font: inherit; font-weight: 650; cursor: not-allowed; }
     .release-installers button { width: 100%; color: #d2e6e4; }
+    .release-installers .button, .release-row .button { max-width: 100%; text-align: center; overflow-wrap: anywhere; }
+    .release-row > div { min-width: 0; }
     .release-history { margin-top: clamp(4rem, 8vw, 7rem); }
     .release-history-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }
     .release-history-heading p { max-width: 25rem; margin: 0; color: #426564; }
