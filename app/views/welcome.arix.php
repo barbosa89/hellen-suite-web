@@ -26,9 +26,12 @@
             <p>{{ trans('home.features_intro') }}</p>
         </div>
         <div class="feature-list">
-            <article class="feature"><h3>{{ trans('home.reservations_title') }}</h3><p>{{ trans('home.reservations_content') }}</p></article>
             <article class="feature"><h3>{{ trans('home.rooms_title') }}</h3><p>{{ trans('home.rooms_content') }}</p></article>
+            <article class="feature"><h3>{{ trans('home.reservations_title') }}</h3><p>{{ trans('home.reservations_content') }}</p></article>
+            <article class="feature"><h3>{{ trans('home.stays_title') }}</h3><p>{{ trans('home.stays_content') }}</p></article>
             <article class="feature"><h3>{{ trans('home.finances_title') }}</h3><p>{{ trans('home.finances_content') }}</p></article>
+            <article class="feature"><h3>{{ trans('home.cash_title') }}</h3><p>{{ trans('home.cash_content') }}</p></article>
+            <article class="feature"><h3>{{ trans('home.overview_title') }}</h3><p>{{ trans('home.overview_content') }}</p></article>
         </div>
     </section>
     <section class="showcase section-wrap" aria-labelledby="showcase-title">
