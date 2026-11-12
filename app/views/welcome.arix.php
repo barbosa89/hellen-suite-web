@@ -37,6 +37,9 @@
             <figure><a href="{{ media('hotels.webp') }}" class="screenshot-link"><img src="{{ media('hotels.webp') }}" alt="{{ trans('home.screenshot_hotels') }}" loading="lazy" decoding="async"></a><figcaption>{{ trans('home.screenshot_hotels') }}</figcaption></figure>
             <figure><a href="{{ media('overview.webp') }}" class="screenshot-link"><img src="{{ media('overview.webp') }}" alt="{{ trans('home.screenshot_overview') }}" loading="lazy" decoding="async"></a><figcaption>{{ trans('home.screenshot_overview') }}</figcaption></figure>
             <figure><a href="{{ media('rooms.webp') }}" class="screenshot-link"><img src="{{ media('rooms.webp') }}" alt="{{ trans('home.screenshot_rooms') }}" loading="lazy" decoding="async"></a><figcaption>{{ trans('home.screenshot_rooms') }}</figcaption></figure>
+            <figure><a href="{{ media('check-in.webp') }}" class="screenshot-link"><img src="{{ media('check-in.webp') }}" alt="{{ trans('home.screenshot_check_in') }}" loading="lazy" decoding="async"></a><figcaption>{{ trans('home.screenshot_check_in') }}</figcaption></figure>
+            <figure><a href="{{ media('reservation.webp') }}" class="screenshot-link"><img src="{{ media('reservation.webp') }}" alt="{{ trans('home.screenshot_reservation') }}" loading="lazy" decoding="async"></a><figcaption>{{ trans('home.screenshot_reservation') }}</figcaption></figure>
+            <figure><a href="{{ media('settings.webp') }}" class="screenshot-link"><img src="{{ media('settings.webp') }}" alt="{{ trans('home.screenshot_settings') }}" loading="lazy" decoding="async"></a><figcaption>{{ trans('home.screenshot_settings') }}</figcaption></figure>
         </div>
         <dialog class="screenshot-dialog" aria-labelledby="screenshot-caption">
             <div class="screenshot-dialog-bar">
