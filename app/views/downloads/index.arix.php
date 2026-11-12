@@ -55,11 +55,13 @@
             <section class="downloads-faq" aria-labelledby="faq-title">
                 <h2 id="faq-title">{{ trans('downloads.faq_title') }}</h2>
                 <details class="downloads-faq-item"><summary>{{ trans('downloads.faq_systems') }}</summary><p>{{ trans('downloads.platform_availability') }}</p></details>
-                <details class="downloads-faq-item"><summary>{{ trans('downloads.faq_install') }}</summary><p>{{ trans('downloads.pending') }}</p></details>
+                <details class="downloads-faq-item"><summary>{{ trans('downloads.faq_install') }}</summary><p>{{ trans('downloads.faq_install_answer') }}</p></details>
                 <details class="downloads-faq-item"><summary>{{ trans('downloads.faq_data') }}</summary><p>{{ trans('downloads.faq_data_answer') }}</p></details>
                 <details class="downloads-faq-item"><summary>{{ trans('downloads.faq_offline') }}</summary><p>{{ trans('downloads.faq_offline_answer') }}</p></details>
-                <details class="downloads-faq-item"><summary>{{ trans('downloads.faq_backups') }}</summary><p>{{ trans('downloads.pending') }}</p></details>
-                <details class="downloads-faq-item"><summary>{{ trans('downloads.faq_contact') }}</summary><p>{{ trans('downloads.pending') }}</p></details>
+                <details class="downloads-faq-item"><summary>{{ trans('downloads.faq_backups') }}</summary><p>{{ trans('downloads.faq_backups_answer') }}</p></details>
+                <details class="downloads-faq-item">
+                    <summary>{{ trans('downloads.faq_contact') }}</summary><p>{{ trans('downloads.faq_contact_before') }} <a href="https://github.com/barbosa89/hellen-suite/issues">GitHub</a> {{ trans('downloads.faq_contact_or') }} <a href="mailto:contacto@omarbarbosa.com">contacto@omarbarbosa.com</a>. {{ trans('downloads.faq_contact_security') }}</p>
+                </details>
             </section>
         </div>
     </div>
