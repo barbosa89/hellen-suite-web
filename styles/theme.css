@@ -51,8 +51,22 @@
     .showcase-heading p { max-width: 26rem; margin: 0; font-size: 1.1rem; }
     .showcase-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
     .showcase-grid figure { min-width: 0; margin: 0; }
-    .screenshot-placeholder { display: grid; place-items: center; width: 100%; min-width: 0; aspect-ratio: 4 / 3; padding: 1.5rem; border: 1px dashed #89aaa5; background: #e7f0ed; color: #315d5d; text-align: center; }
+    .showcase-grid img { display: block; width: 100%; height: auto; border: 1px solid #d8e5e1; }
+    .screenshot-link { display: block; cursor: zoom-in; }
+    .screenshot-link:hover img { border-color: #317179; }
     .showcase-grid figcaption { padding-top: 1rem; line-height: 1.6; }
+    .screenshot-dialog { width: min(calc(100% - 2.5rem), 120rem); height: calc(100% - 2.5rem); max-width: none; max-height: calc(100% - 2.5rem); margin: auto; padding: 1.25rem; border: 0; background: #f5f8f6; color: var(--ink); }
+    .screenshot-dialog[open] { display: flex; flex-direction: column; }
+    .screenshot-dialog::backdrop { background: rgb(3 28 31 / .88); }
+    .screenshot-dialog-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .75rem 1.5rem; padding-bottom: 1.25rem; }
+    .screenshot-dialog-bar p { margin: 0; font-weight: 650; }
+    .screenshot-dialog-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .screenshot-original { font-weight: 650; text-underline-offset: .2em; }
+    .screenshot-close { min-height: 2.75rem; padding: .5rem 1rem; border: 0; border-radius: .25rem; background: var(--teal); color: white; font: inherit; font-weight: 650; cursor: pointer; }
+    .screenshot-close:hover { background: #0a5c66; }
+    .screenshot-close:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+    .screenshot-dialog-image { flex: 1; min-height: 0; }
+    .screenshot-dialog-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
     .download { display: flex; align-items: end; justify-content: space-between; gap: 3rem; background: #b8edf0; }
     .download h2 { max-width: none; }
     .button-dark { flex: none; background: var(--teal); color: white; }
