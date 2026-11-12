@@ -6,8 +6,8 @@
             <h1 id="home-title">{{ trans('home.title') }}</h1>
             <p class="hero-description">{{ trans('home.description') }}</p>
             <div class="hero-actions">
-                <a class="button button-primary" href="{{ route('downloads') }}">{{ trans('home.download') }}</a>
-                <a class="text-link" href="#features">{{ trans('home.discover') }} <span aria-hidden="true">↓</span></a>
+                <a class="button button-primary" href="{{ route('downloads') }}">@include('components.icons.arrow-download')<span>{{ trans('home.download') }}</span></a>
+                <a class="text-link" href="#features">{{ trans('home.discover') }}</a>
             </div>
         </div>
         <div class="hero-mark" aria-hidden="true"><img src="{{ media('hellen-suite-icon.png') }}" alt="" width="512" height="512"></div>
@@ -57,6 +57,6 @@
             <h2 id="download-title">{{ trans('home.download_heading') }}</h2>
             <p>{{ trans('home.download_content') }}</p>
         </div>
-        <a class="button button-dark" href="{{ route('downloads') }}">{{ trans('home.download') }}</a>
+        <a class="button button-dark" href="{{ route('downloads') }}">@include('components.icons.arrow-download')<span>{{ trans('home.download') }}</span></a>
     </section>
 @endsection

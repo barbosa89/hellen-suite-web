@@ -27,7 +27,7 @@
                         <div><dt>{{ trans('downloads.requirements') }}</dt><dd>{{ trans('downloads.pending') }}</dd></div>
                     </dl>
                     @foreach ($latest['assets'] as $asset)
-                        <a class="button button-primary" href="{{ $asset['browser_download_url'] }}">{{ trans('downloads.download_windows') }} — {{ $asset['name'] }} ({{ round($asset['size'] / 1048576, 1) }} MiB)</a>
+                        <a class="button button-primary" href="{{ $asset['browser_download_url'] }}">@include('components.icons.arrow-download')<span>{{ trans('downloads.download_windows') }} — {{ $asset['name'] }} ({{ round($asset['size'] / 1048576, 1) }} MiB)</span></a>
                     @endforeach
                 </div>
             </section>
